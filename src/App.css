@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.filterBar {
   flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #d2d2d2;
+  border-radius: 10px;
+  width: 250px;
+  height: 800px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+}
+
+.header {
+  padding: 20px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  max-width: 100%;
+  margin: 0 auto;
+  border-bottom: 5px solid #c8102e;
+  background-color: #1d428a;
+}
+
+.header h1 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header h3 {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.legend {
+  padding: 5px;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid grey;
+  background-color: #fffdd0;
+}
+
+.Item-grid {
+  display: grid;
+  margin: 30px;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.card {
+  padding: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 8px;
+  padding: 8px;
+}
+
+.grid-container div {
+  text-align: center;
+  padding: 30px;
+  margin: 10px;
+  border-style: outset;
 }

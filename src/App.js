@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./Header";
+import Legend from "./Legend";
+import PlayerCard from "./PlayerCard";
+import Positions from "./Positions";
+import Stats from "./Stats";
+import { PlayerInformation } from "./playerData";
+
+// import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Fuck I'm fucked.
-        </a>
-      </header>
-    </div>
-  );
+    // const[price, setPrice] = useState(0);
+    return (
+        <div className="App">
+            <div>
+                <Header />
+                <Legend />
+                <div className="grid-container">
+                    <div className="filterBar">
+                        <Positions />
+                        <Stats />
+                    </div>
+                    <div className="Item-grid">
+                        {PlayerInformation.map(
+                            (
+                                player // TODO: map bakeryData to BakeryItem components
+                            ) => (
+                                <PlayerCard player={player} />
+                            )
+                        )}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;
